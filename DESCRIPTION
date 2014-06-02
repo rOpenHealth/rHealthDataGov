@@ -1,8 +1,8 @@
 Package: rHealthDataGov
 Type: Package
 Title: Retrieve data sets from the HealthData.gov data API
-Version: 1.0.0
-Date: 2014-04-13
+Version: 1.0.1
+Date: 2014-06-01
 Author: Erin LeDell
 Maintainer: Erin LeDell <ledell@berkeley.edu>
 Description: An R interface for the HealthData.gov data API.  For each data resource, you can filter results (server-side) to select subsets of data.

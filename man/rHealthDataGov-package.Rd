@@ -12,8 +12,8 @@ An R interface for the HealthData.gov data API.  For each data resource, you can
 \tabular{ll}{
 Package: \tab rHealthDataGov\cr
 Type: \tab Package\cr
-Version: \tab 1.0.0\cr
-Date: \tab 2014-04-13\cr
+Version: \tab 1.0.1\cr
+Date: \tab 2014-06-01\cr
 License: \tab GPL-2\cr
 }
 The main function of this package is \code{fetch_healthdata}, which is used to query (by filter) and retrieve data from the HealthData.gov data API.  Currently, the only interesting data store available via the HealthData.gov API is the "Hospital Compare" data store.  This is comprised of 33 data sets containing information about process of care, mortality, and readmission quality measures for U.S. hospitals.  This package is part of the rOpenHealth project: \url{https://github.com/rOpenHealth}

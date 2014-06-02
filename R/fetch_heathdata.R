@@ -22,8 +22,7 @@
   req <- POST(api_url, body = jsontext, add_headers("Content-type" = "application/json"))
   
   if (req$status_code >= 400) {
-    err <- content(req, "parsed")$err
-    stop("Request failed: ", err$`__type`, ": ", err$resource_id, call. = FALSE)
+    stop(sprintf("HealthData.gov API returned an error: HTTP status code %s, %s", req$status_code, req$headers$statusmessage))
   }
   stop_for_status(req) 
   reslist <- content(req, "parsed")

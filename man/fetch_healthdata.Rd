@@ -33,8 +33,10 @@ The HealthData.gov API only returns 100 results per HTTP request, so if you quer
 }
 
 \examples{
+\dontrun{
 df <- fetch_healthdata(resource="hosp", filter=list(addr_city="SAN FRANCISCO"))
 head(df)
+
 #       addr_city provider_id    tel_nbr seqn              addr_line_1
 # 1 SAN FRANCISCO       50076 4158332646   38          2425 GEARY BLVD
 # 2 SAN FRANCISCO       50228 4152068000  641      1001 POTRERO AVENUE
@@ -64,5 +66,6 @@ head(df)
 # 5                    SAINT FRANCIS MEMORIAL HOSPITAL       480
 # 6  CALIFORNIA PACIFIC MEDICAL CTR - ST. LUKES CAMPUS       480
 
+}
 }
 \keyword{API}
