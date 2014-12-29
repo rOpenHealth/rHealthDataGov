@@ -21,7 +21,7 @@ Query Hospital Characteristics
 
 The query parameters are passed in POST request in JSON format.  Here is an example of a query that can be executed with this package.  This is a query of the "Hospital Characteristics" data set that filters to hospitals in San Francisco, CA using the [curl](http://en.wikipedia.org/wiki/CURL#cURL) command line tool.
 
-```
+```shell
 curl http://hub.Healthdata.gov/api/action/datastore_search --data-urlencode '
 {
   "resource_id": "391792b5-9c0a-48a1-918f-2ee63caa1c54",
@@ -33,7 +33,7 @@ curl http://hub.Healthdata.gov/api/action/datastore_search --data-urlencode '
 
 Using this package, we can make the same request as follows:
 
-```
+```r
 > df <- fetch_healthdata(resource="hosp", filter=list(addr_city="SAN FRANCISCO"))
 > dim(df)
 [1] 10 14
@@ -70,7 +70,7 @@ Using this package, we can make the same request as follows:
 
 To apply multiple filters, we add list elements to the `filter` argument as follows:
 
-```
+```r
 > myfilter <- list(addr_city="SAN FRANCISCO", ownership_type="Government - Local")
 > df <- fetch_healthdata(resource="hosp", filter=myfilter)
 > dim(df)
@@ -80,7 +80,7 @@ To apply multiple filters, we add list elements to the `filter` argument as foll
 
 To retrieve the entire data set without filtering, you simply set `filter = NULL` and wait for the response.
 
-```
+```r
 > system.time(df <- fetch_healthdata("hosp", filter=NULL))
    user  system elapsed 
   1.902   0.136  15.207 
@@ -93,7 +93,7 @@ Query Healthcare Quality Indicators
 
 Here we will query for providers with a post-op respiratory failure that is "Worse than the U.S. National Rate".  This info is available in the "Healthcare Research and Quality Indicators, Providers (ahrqp)" data set.
 
-```
+```r
 > myfilter <- list(psi_11_postop_respfail_1="Worse than U.S. National Rate")
 > df <- fetch_healthdata(resource="ahrqp", filter=myfilter)
 > dim(df)
