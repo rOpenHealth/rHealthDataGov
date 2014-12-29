@@ -1,5 +1,8 @@
 importFrom(httr, GET)
-importFrom(jsonlite, fromJSON)
+importFrom(httr, POST)
+importFrom(httr, add_headers)
+importFrom(httr, stop_for_status)
+importFrom(httr, content)
 importFrom(bit64, as.integer64)
 
 exportPattern("^[[:alpha:]]+")

@@ -100,9 +100,3 @@ Here we will query for providers with a post-op respiratory failure that is "Wor
 [1] 251  63
 ```
 
-===
-Please report any issues to ledell _at_ berkeley.edu.
-
-
-
-
