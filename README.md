@@ -3,10 +3,12 @@ rHealthDataGov
 
 This package provides an R interface to the [HealthData.gov data API](http://www.healthdata.gov/data-api).
 
+**Note to users:** The HealthData.gov Data API is currently down.  See this [issue](https://github.com/rOpenHealth/rHealthDataGov/issues/3) for updates.
+
 Info
 ====
 
-This package currently supports querying the 33 [Hospital Compare](http://hub.healthdata.gov/dataset/hospital-compare-api) data sets that are available via the [HealthData.gov data API](http://www.healthdata.gov/data-api).  These data sets contain information related to process of care, mortality, and readmission quality measures of U.S. hospitals.
+This package currently supports querying the 33 [Hospital Compare](http://hub.healthdata.gov/dataset/hospital-compare-api) data sets that are available via the [HealthData.gov Data API](http://www.healthdata.gov/data-api).  These data sets contain information related to process of care, mortality, and readmission quality measures of U.S. hospitals.
 
 The full functionality of the API is exposed through this package, so you can pass one or more filters that subset a data set on the server-side, returning only the records that match your query.  The original API limits the number of records returned by a query to 100 records per HTTP request.  This package simplifies the retrieval process by making multiple HTTP requests on your behalf and returning the full result of your query as an R data frame.  We also simplify the experience by providing two data objects that provide metadata about the data sources, their available fields and field values.  These data objects, which are included in the package, include a data frame called `resources` that describes the available data sources and a list called `filters` that includes the available filters for each data resource along with the unique values that exist for each filter.
 
